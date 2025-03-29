@@ -1,0 +1,51 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load ratings %}
+
+
+
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script> 
+{% block content %}
+
+<html>
+
+
+ 
+
+ <style>
+   img {
+      width: 80%;
+      float: left;
+      margin-right: 20px;
+   }
+    .text1 {
+      float: right;
+      margin-right: 1000px;
+      margin-top: 50px;
+   } 
+   .text {
+    float: right;
+    margin-right: 900px;
+    margin-top: 50px;
+ } 
+</style>
+<div class="text1">
+<h2>{{ object.title }}</h2>
+</div>
+    <img src="{{ object.photo.url }}" />
+
+<div class="text">
+   {% ratings object %}
+
+   <h3>{{ object.user }}</h3>
+   <p>{{ object.publish }}<br/></p>
+   <a href="{% url 'upimg:download_image' pk=object.pk %}">Download Image</a>
+
+   {% comment %} <a href="{{object.image.url}} download">Download this image!</a> {% endcomment %}
+
+</div> 
+{% endblock content %}
+
+
+

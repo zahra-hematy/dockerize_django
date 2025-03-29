@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> ثبت نام</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{% static  'css/roboto-font.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-5/css/fontawesome-all.min.css' %}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static  'css/cs/style.css' %}"/>
+</head>
+<body class="form-v5"  dir="center">
+
+
+
+	<div class="page-content">
+		<div class="form-v5-content">
+			<form class="form-detail" action="#" method="post">
+				<h2>ثبت نام کاربران </h2>
+				<div class="form-row" dir="rtl">
+
+          {% if form.errors %}
+            {{ form.errors }}
+          {% endif %}
+          <form method="post" dir='rtl'>
+              {{ form.as_p }}
+              {% csrf_token %}
+			  <h4 class="mb-4 text-center">آیا  اکنون اکانتی دارید؟ برای ورود  <a href="{% url 'upimg:login' %} ">کلیک </a> کنید</h4>
+        	
+				</div>
+				<div class="form-row-last" dir="rtl">
+					<input type="submit" name="register" class="register" value="ثبت نام">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

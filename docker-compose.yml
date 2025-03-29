@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  app:
+    build: './app'
+    restart: 'always'
+    ports:
+      - "8000:8000"
+    container_name: 'app'
+    volumes:
+      - type: 'bind'
+        source: './volumes/app'
+        target: '/app'

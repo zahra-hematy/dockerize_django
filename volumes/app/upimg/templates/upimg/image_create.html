@@ -1,0 +1,15 @@
+{% load crispy_forms_tags %}
+
+
+
+
+
+<br/>
+<h2 dir='rtl'> افزودن تصویر</h2>
+<form method="post" enctype="multipart/form-data" dir='rtl'  >
+  <br/>
+  {% csrf_token %}
+  {{ form|crispy }}
+  <br/>
+  <button dir='ltr' type="submit">ارسال</button>
+</form>
