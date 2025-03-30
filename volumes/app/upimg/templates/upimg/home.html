@@ -1,12 +1,6 @@
 
 {% load static %}
-
-
-
-
-<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
-<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
-
+ 
 
 <link rel="stylesheet" type="text/css" href="/static/css/style1.css">
 <br/>
@@ -44,20 +38,6 @@
     </tr>
 </table>    
 {% endblock content %}
-{% comment %} <html>
-    <head>
-        <title> upload image </title>
-    </head>
-    <body>
-        <h1> آپلود تصاویر </h1>
-        <ul>
-            {% for img in object_list  %}
-            
-                <h2> {{img.title}}</h2>
-                <img src="{{ img.photo.url }}" alt="{{ img.title }}">
-                
-            {% endfor %}
-        </ul>
-     {% endcomment %}
+ 
 
      </html>

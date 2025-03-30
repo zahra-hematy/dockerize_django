@@ -4,8 +4,6 @@
 
 
 
-<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
-<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script> 
 {% block content %}
 
 <html>
@@ -42,8 +40,7 @@
    <p>{{ object.publish }}<br/></p>
    <a href="{% url 'upimg:download_image' pk=object.pk %}">Download Image</a>
 
-   {% comment %} <a href="{{object.image.url}} download">Download this image!</a> {% endcomment %}
-
+ 
 </div> 
 {% endblock content %}
 
