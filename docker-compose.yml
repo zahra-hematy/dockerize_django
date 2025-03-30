@@ -3,10 +3,23 @@ services:
   app:
     build: './app'
     restart: 'always'
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     container_name: 'app'
+    
     volumes:
       - type: 'bind'
         source: './volumes/app'
         target: '/app'
+  nginx:
+    build: './nginx'
+    restart: 'always'
+    ports:
+      - "80:80"
+    container_name: 'nginx'
+    depends_on: 
+      - 'app'
+    volumes:
+      - type: 'bind'
+        source: './volumes/media'
+        target: '/app/media'

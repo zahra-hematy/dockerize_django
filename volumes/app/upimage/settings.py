@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@)8p9f08vq5m99o2#ge!x8t5(5_lvtefd!+x-&6k(g43#8*fh)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', '0.0.0.0']
+ALLOWED_HOSTS = ['app', 'localhost', '127.0.0.1', '0.0.0.0',  'nginx', '0.0.0.0:8000']
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'uni_form'
@@ -174,9 +174,4 @@ AUTH_USER_MODEL = 'upimg.CustomUser'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'hemmaty.zh@gmail.com'
-EMAIL_HOST_PASSWORD = 'enbbhvlznldfmzds'
+
