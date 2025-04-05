@@ -1,12 +1,9 @@
 
 {% load static %}
- 
-
 <link rel="stylesheet" type="text/css" href="/static/css/style1.css">
 <br/>
 <hr/>
 {% block content %}
-
 	{% if messages %}
 <ul class="messages">
     {% for message in messages %}
@@ -14,8 +11,6 @@
     {% endfor %}
 </ul> 
      {% endif %}
-
-
 {% if user.is_authenticated %}
     <a href="{% url 'upimg:logout' %}" class="button">خروج</a>
 {% else %}
@@ -38,6 +33,4 @@
     </tr>
 </table>    
 {% endblock content %}
- 
-
-     </html>
+ </html>

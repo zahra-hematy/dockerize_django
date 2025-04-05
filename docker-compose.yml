@@ -21,5 +21,8 @@ services:
       - 'app'
     volumes:
       - type: 'bind'
-        source: './volumes/media'
+        source: './volumes/app/media'
         target: '/app/media'
+      - type: 'bind'
+        source: './volumes/staticfiles'
+        target: '/app/staticfiles'

@@ -28,15 +28,7 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('add/', CreateImageView.as_view(), name='add' ),
     path('<int:pk>/', DetailHomeView.as_view(), name='detail' ),
-    # path('<int:pk>/download/', DownloaddetailView.as_view(), name='download' ),
-
-
-
     path('<int:pk>/download/', download_image, name='download_image'),
-
-    # path('ratings/', include('star_ratings.urls', namespace='ratings')),
-
-
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', views.SignupView, name="register"),
